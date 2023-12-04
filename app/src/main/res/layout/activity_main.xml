@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/the_cipher_kind"
+
+        app:layout_constraintBottom_toTopOf="@id/llB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btShift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shift_simple"/>
+
+        <Button
+            android:id="@+id/btReplace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symbol_replacement"/>
+
+        <Button
+            android:id="@+id/btFromASCII"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/from_ascii_codes_to_text"/>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

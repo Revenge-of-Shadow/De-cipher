@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ReplacementActivity">
+
+    <TextView
+        android:id="@+id/tvREnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/etREnter"
+        />
+
+    <EditText
+        android:id="@+id/etREnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvREnter"
+        app:layout_constraintBottom_toTopOf="@id/tvROSymbols"/>
+
+    <TextView
+        android:id="@+id/tvROSymbols"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/original_symbols"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etREnter"
+        app:layout_constraintBottom_toTopOf="@+id/etROSymbols"/>
+
+    <EditText
+        android:id="@+id/etROSymbols"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alphabetEngUpper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvROSymbols"
+        app:layout_constraintBottom_toTopOf="@+id/tvRSymbols"/>
+
+    <TextView
+        android:id="@+id/tvRSymbols"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resulting_symbols"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etROSymbols"
+        app:layout_constraintBottom_toTopOf="@+id/etRSymbols"/>
+
+    <EditText
+        android:id="@+id/etRSymbols"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reverseAlphabetEngUpper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRSymbols"
+        app:layout_constraintBottom_toTopOf="@+id/btRStart"/>
+
+    <Button
+        android:id="@+id/btRStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etRSymbols"
+        app:layout_constraintBottom_toTopOf="@+id/tvRResult"/>
+
+    <TextView
+        android:id="@+id/tvRResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btRStart"
+        app:layout_constraintBottom_toTopOf="@id/etRResult"/>
+
+    <EditText
+        android:id="@+id/etRResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRResult"
+        app:layout_constraintBottom_toTopOf="@+id/btRSwap"/>
+    <Button
+        android:id="@+id/btRSwap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/swap_the_symbol_codes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRResult"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

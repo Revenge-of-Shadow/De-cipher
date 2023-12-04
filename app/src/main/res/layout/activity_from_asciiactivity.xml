@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FromASCIIActivity">
+
+    <TextView
+        android:id="@+id/tvFAEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/etFAEnter"
+        />
+
+    <EditText
+        android:id="@+id/etFAEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFAEnter"
+        app:layout_constraintBottom_toTopOf="@id/tvFAMode"/>
+
+    <TextView
+        android:id="@+id/tvFAMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFAEnter"
+        app:layout_constraintBottom_toTopOf="@+id/spFAMode"
+        />
+
+
+    <Spinner
+        android:id="@+id/spFAMode"
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFAMode"
+        app:layout_constraintBottom_toTopOf="@id/tvFAEncoding"
+        android:spinnerMode="dialog"
+        />
+
+
+    <TextView
+        android:id="@+id/tvFAEncoding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/encoding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spFAMode"
+        app:layout_constraintBottom_toTopOf="@+id/spFAEncoding"
+        />
+
+
+    <Spinner
+        android:id="@+id/spFAEncoding"
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFAEncoding"
+        app:layout_constraintBottom_toTopOf="@id/btFAStart"
+        android:spinnerMode="dialog"
+        />
+
+
+
+    <Button
+        android:id="@+id/btFAStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spFAEncoding"
+        app:layout_constraintBottom_toTopOf="@+id/tvFAResult"/>
+
+    <TextView
+        android:id="@+id/tvFAResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btFAStart"
+        app:layout_constraintBottom_toTopOf="@id/etFAResult"/>
+
+    <EditText
+        android:id="@+id/etFAResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFAResult"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

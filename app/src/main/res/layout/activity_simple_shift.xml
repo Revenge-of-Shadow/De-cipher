@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".SimpleShiftActivity">
+
+    <TextView
+        android:id="@+id/tvSSEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/etSSEnter"
+        />
+
+    <EditText
+        android:id="@+id/etSSEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSSEnter"
+        app:layout_constraintBottom_toTopOf="@id/tvSSSymbols"/>
+
+    <TextView
+        android:id="@+id/tvSSSymbols"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sybmbols"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSSEnter"
+        app:layout_constraintBottom_toTopOf="@+id/etSSSymbols"/>
+
+    <EditText
+        android:id="@+id/etSSSymbols"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alphabetEngUpper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSSSymbols"
+        app:layout_constraintBottom_toTopOf="@+id/tvSSShiftVal"/>
+
+    <TextView
+        android:id="@+id/tvSSShiftVal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shift_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSSSymbols"
+        app:layout_constraintBottom_toTopOf="@+id/npSSShiftVal"/>
+
+   <EditText
+       android:id="@+id/npSSShiftVal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="1"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/tvSSShiftVal"
+       app:layout_constraintBottom_toTopOf="@+id/btSSStart"
+        />
+
+    <Button
+        android:id="@+id/btSSStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/npSSShiftVal"
+        app:layout_constraintBottom_toTopOf="@+id/tvSSResult"/>
+
+    <TextView
+        android:id="@+id/tvSSResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btSSStart"
+        app:layout_constraintBottom_toTopOf="@id/etSSResult"/>
+
+    <EditText
+        android:id="@+id/etSSResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSSResult"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

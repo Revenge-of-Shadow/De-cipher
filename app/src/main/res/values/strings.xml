@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">De+cipher</string>
+    <string name="the_cipher_kind">The cipher kind:</string>
+    <string name="shift_simple">Shift (simple)</string>
+    <string name="title_activity_simple_shift">SimpleShiftActivity</string>
+
+    <string name="enter">Enter the sequence:</string>
+    <string name="start">Start.</string>
+    <string name="result">Result:</string>
+    <string name="sybmbols">Sybmbols:</string>
+    <string name="alphabetEngUpper">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="shift_value">Shift value:</string>
+    <string name="title_activity_asciiactivity">ASCIIActivity</string>
+    <string name="encoding">Encoding:</string>
+    <string name="mode">Mode:</string>
+    <string name="from_ascii_codes_to_text">From ASCII codes to text</string>
+    <string name="original_symbols">Original symbols:</string>
+    <string name="reverseAlphabetEngUpper">ZYXWVUTSRQPONMLKJIHGFEDCBA</string>
+    <string name="resulting_symbols">Resulting symbols:</string>
+    <string name="swap_the_symbol_codes">Swap the symbol codes.</string>
+    <string name="symbol_replacement">Symbol replacement</string>
+</resources>
