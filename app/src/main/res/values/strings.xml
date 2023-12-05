@@ -19,4 +19,5 @@
     <string name="resulting_symbols">Resulting symbols:</string>
     <string name="swap_the_symbol_codes">Swap the symbol codes.</string>
     <string name="symbol_replacement">Symbol replacement</string>
+    <string name="shift_by_one_right">Shift by one right.</string>
 </resources>

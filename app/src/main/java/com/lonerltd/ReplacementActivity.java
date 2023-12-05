@@ -23,25 +23,25 @@ import com.lonerltd.databinding.ActivitySimpleShiftBinding;
 
 public class ReplacementActivity extends AppCompatActivity {
 
-    Button btStart, btSwap;
+    Button btStart, btSwap, btShift;
     EditText etInput, etOutput, etOSymbols, etSymbols;
 
     View.OnClickListener oclBtStart  = view -> {
         String inputText = String.valueOf(etInput.getText()),
                 outputText = "",
                 osymbols = String.valueOf(etOSymbols.getText()),
-                symbols = String.valueOf(etSymbols.getText());
+                rsymbols = String.valueOf(etSymbols.getText());
 
 
-        if(inputText.equals("") || symbols.length() < 2 || osymbols.length() < 2)
+        if(inputText.equals("") || rsymbols.length() < 2 || osymbols.length() < 2)
             return;
 
         for(int ind = 0; ind < inputText.length(); ++ind){
-            int symb_ind = symbols.indexOf(inputText.charAt(ind));
+            int symb_ind = osymbols.indexOf(inputText.charAt(ind));
 
             if(symb_ind > -1) {
                 //  The corresponding symbol is found. Proceed with replacement.
-                outputText += osymbols.charAt(symb_ind);
+                outputText += rsymbols.charAt(symb_ind);
             }else {
                 //  Symbol is not found. Accept it as is.
                 outputText += inputText.charAt(ind);
@@ -57,6 +57,14 @@ public class ReplacementActivity extends AppCompatActivity {
         etSymbols.setText(osymbols);
     };
 
+    View.OnClickListener oclBtShift = view ->{
+        String rsymbols = String.valueOf(etSymbols.getText());
+        char last = rsymbols.charAt(rsymbols.length()-1);
+        rsymbols = last + rsymbols.substring(0, rsymbols.length()-1);
+
+        etSymbols.setText(rsymbols);
+    };
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +72,7 @@ public class ReplacementActivity extends AppCompatActivity {
 
         btStart = (Button) findViewById(R.id.btRStart);
         btSwap = (Button) findViewById(R.id.btRSwap);
+        btShift = (Button) findViewById(R.id.btRShift);
         etInput = (EditText) findViewById(R.id.etREnter);
         etOutput = (EditText) findViewById(R.id.etRResult);
         etOSymbols = (EditText) findViewById(R.id.etROSymbols);
@@ -71,6 +80,7 @@ public class ReplacementActivity extends AppCompatActivity {
 
         btStart.setOnClickListener(oclBtStart);
         btSwap.setOnClickListener(oclBtSwap);
+        btShift.setOnClickListener(oclBtShift);
 
     }
 }

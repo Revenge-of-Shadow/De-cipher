@@ -23,7 +23,7 @@ public class FromASCIIActivity extends AppCompatActivity {
     Button btStart;
     EditText etInput, etOutput;
     Spinner spMode, spEncoding;
-    private String[] modes = {"HEX (NN format [N : 0-F]).", "Numbers (separated by space)."};
+    private String[] modes = {"HEX (NN format [N : 0-F]).", "Numbers (separated by space).", "Numbers 1-25 for English alphabet."};
     private String[] encodings = {"Windows-1252"};
     ArrayAdapter<String> modeAdapter;
     ArrayAdapter<String> encodingAdapter;
@@ -51,13 +51,19 @@ public class FromASCIIActivity extends AppCompatActivity {
             }
 
 
-        }else{
+        }else if(((String)spMode.getSelectedItem()).equals(modes[1])){
             //  Digits
             String[] divided = source.split(" ");
 
             for (int ind = 0; ind < divided.length; ++ind)
                 res += (char) Integer.parseInt(divided[ind]);
 
+        }else if(((String)spMode.getSelectedItem()).equals(modes[2])){
+            //  Digits 1-25.
+            String[] divided = source.split("/( )|(-)/g");
+
+            for (int ind = 0; ind < divided.length; ++ind)
+                res += (char) (0x40 + Integer.parseInt(divided[ind]));
         }
 
 
