@@ -23,7 +23,7 @@ import com.lonerltd.databinding.ActivitySimpleShiftBinding;
 
 public class ReplacementActivity extends AppCompatActivity {
 
-    Button btStart, btSwap, btShift;
+    Button btStart, btSwap, btShift, btReverse;
     EditText etInput, etOutput, etOSymbols, etSymbols;
 
     View.OnClickListener oclBtStart  = view -> {
@@ -65,6 +65,14 @@ public class ReplacementActivity extends AppCompatActivity {
         etSymbols.setText(rsymbols);
     };
 
+    View.OnClickListener oclBtReverse = view ->{
+        String rsymbols = String.valueOf(etSymbols.getText());
+        String res = "";
+        for (int ind = rsymbols.length()-1; ind >=0; ++ind, res+=rsymbols.charAt(ind)){}
+
+        etSymbols.setText(res);
+    };
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +81,7 @@ public class ReplacementActivity extends AppCompatActivity {
         btStart = (Button) findViewById(R.id.btRStart);
         btSwap = (Button) findViewById(R.id.btRSwap);
         btShift = (Button) findViewById(R.id.btRShift);
+        btReverse = (Button) findViewById(R.id.btRReverse);
         etInput = (EditText) findViewById(R.id.etREnter);
         etOutput = (EditText) findViewById(R.id.etRResult);
         etOSymbols = (EditText) findViewById(R.id.etROSymbols);
@@ -81,6 +90,7 @@ public class ReplacementActivity extends AppCompatActivity {
         btStart.setOnClickListener(oclBtStart);
         btSwap.setOnClickListener(oclBtSwap);
         btShift.setOnClickListener(oclBtShift);
+        btReverse.setOnClickListener(oclBtReverse);
 
     }
 }
