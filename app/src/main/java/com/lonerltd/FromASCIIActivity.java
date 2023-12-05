@@ -58,12 +58,30 @@ public class FromASCIIActivity extends AppCompatActivity {
             for (int ind = 0; ind < divided.length; ++ind)
                 res += (char) Integer.parseInt(divided[ind]);
 
-        }else if(((String)spMode.getSelectedItem()).equals(modes[2])){
+        }else if(((String)spMode.getSelectedItem()).equals(modes[2])) {
             //  Digits 1-25.
-            String[] divided = source.split("/( )|(-)/g");
 
-            for (int ind = 0; ind < divided.length; ++ind)
-                res += (char) (0x40 + Integer.parseInt(divided[ind]));
+            String digit = "";
+
+            for (int ind = 0; ind <= source.length(); ind++) {
+                if(ind == source.length() || source.charAt(ind) > '9' || source.charAt(ind) < '0'){
+                    //  "Eof" or not a number.
+                    if(!digit.isEmpty()){
+                        res += (char)(0x40 + Integer.parseInt(digit));
+                        digit="";
+                    }
+
+                    if (ind != source.length()){
+                        //  Gravity Falls trinket.
+                        res += (source.charAt(ind) == '-'? "" : source.charAt(ind));
+                    }
+                }
+
+                else{
+                    //  Number it is.
+                    digit += source.charAt(ind);
+                }
+            }
         }
 
 

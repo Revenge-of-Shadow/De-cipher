@@ -68,7 +68,9 @@ public class ReplacementActivity extends AppCompatActivity {
     View.OnClickListener oclBtReverse = view ->{
         String rsymbols = String.valueOf(etSymbols.getText());
         String res = "";
-        for (int ind = rsymbols.length()-1; ind >=0; ++ind, res+=rsymbols.charAt(ind)){}
+        for (int ind = rsymbols.length()-1; ind >=0; --ind){
+            res+=rsymbols.charAt(ind);
+        }
 
         etSymbols.setText(res);
     };
